@@ -1,0 +1,43 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "lockfile-reader"
+version = "0.1.0"
+description = "Parse yarn, Bun, pnpm, npm, Cargo, Bundler, Mix and Go lockfiles into one common model, in pure Python."
+readme = "README.md"
+requires-python = ">=3.11"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [{name = "__AUTHOR__"}]
+keywords = ["lockfile", "yarn.lock", "pnpm-lock", "package-lock", "Cargo.lock", "Gemfile.lock", "mix.lock", "bun.lock", "go.sum", "sbom"]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Intended Audience :: Developers",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Programming Language :: Python :: 3.14",
+  "Typing :: Typed",
+]
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest>=8", "mypy>=1.10"]
+
+[project.urls]
+Repository = "https://github.com/__GH_OWNER__/lockfile-reader"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/lockfile_reader"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"
+
+[tool.mypy]
+strict = true
+files = ["src", "tests"]
+mypy_path = "src:tests"

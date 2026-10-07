@@ -10,7 +10,7 @@ readme = "README.md"
 requires-python = ">=3.11"
 license = "MIT"
 license-files = ["LICENSE"]
-authors = [{name = "__AUTHOR__"}]
+authors = [{name = "kofiadeyemiq"}]
 keywords = ["lockfile", "yarn.lock", "pnpm-lock", "package-lock", "Cargo.lock", "Gemfile.lock", "mix.lock", "bun.lock", "go.sum", "sbom"]
 classifiers = [
   "Development Status :: 4 - Beta",
@@ -28,7 +28,7 @@ dependencies = []
 dev = ["pytest>=8", "mypy>=1.10"]
 
 [project.urls]
-Repository = "https://github.com/__GH_OWNER__/lockfile-reader"
+Repository = "https://github.com/quietpelican42/lockfile-reader"
 
 [tool.hatch.build.targets.wheel]
 packages = ["src/lockfile_reader"]
